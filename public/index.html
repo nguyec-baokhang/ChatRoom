@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatroom</title>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+</head>
+<body>
+    
+    <div class="app">
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Users</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div>
+                <div class="users">
+                    
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join chatroom</h2>
+                <div class="form-input">
+                    <label>Username</label>
+                    <input type="text" id="username" class="username">
+                    <select className='room-choice' id="room-choice">
+                        <option>-- Select Room --</option>
+                        <option value='javascript'>JavaScript</option>
+                        <option value='node'>Node</option>
+                        <option value='express'>Express</option>
+                        <option value='react'>React</option>
+                      </select>
+                </div>
+                <div class="form-input">
+                    <button class="submit" id="join-user">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="header">
+                <div class="logo">Chatroom</div>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                      Dropdown button
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a id="chatbot-inbound" class="dropdown-item">Chatbot</a></li>
+                      <li><a id="GCV-inbound" class="dropdown-item">GCV</a></li>
+                      <li><a class="dropdown-item" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">Users</a></li>
+                      <li><a id="exit-chat" class="dropdown-item">Exit</a></li>
+                    </ul>
+                  </div>
+                </div>
+            <div class="messages">
+                
+            </div>
+            <div class="file-container">
+
+            </div>
+            <div class="type-box">
+              <input type="text" id="message-input">
+              
+              <button id="send-message">Send</button>
+              <input type="file" class="send-file" id="send-file">
+              <button type="button" id="file-input-btn">Files</button>
+                
+            </div>
+        </div>
+        
+    </div>
+
+    
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="code.js"></script> 
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/0096be6fc0.js" crossorigin="anonymous"></script>
+</body>
+</html>
